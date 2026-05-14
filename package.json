@@ -1,23 +1,31 @@
 {
-  "name": "html5-kitchen-sink",
-  "version": "1.1.0",
-  "description": "Sample markup containing all HTML5 elements, useful for setting base styles or testing CSS resets and frameworks.",
+  "name": "html5-kitchen-sink-2026",
+  "version": "2.0.0",
+  "description": "A maintained fork of dbox/html5-kitchen-sink, updated for 2026 with new HTML5 elements, corrected semantics, W3C validated markup, and GitHub CDN asset hosting. The original upstream fork is preserved on the master branch.",
   "main": "kitchen-sink.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dbox/html5-kitchen-sink.git"
+    "url": "git+https://github.com/halangdon/html5-kitchen-sink-2026.git"
   },
   "keywords": [
     "html5",
-    "kitchen-sink"
+    "kitchen-sink",
+    "html5-elements",
+    "css-testing"
   ],
-  "author": "Daniel Box",
+  "author": "halangdon",
+  "contributors": [
+    {
+      "name": "Daniel Box",
+      "url": "https://github.com/dbox"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dbox/html5-kitchen-sink/issues"
+    "url": "https://github.com/halangdon/html5-kitchen-sink-2026/issues"
   },
-  "homepage": "https://github.com/dbox/html5-kitchen-sink#readme"
+  "homepage": "https://github.com/halangdon/html5-kitchen-sink-2026#readme"
 }

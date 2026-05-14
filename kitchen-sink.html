@@ -1,3 +1,4 @@
+<!-- Based on dbox/html5-kitchen-sink (MIT). https://github.com/dbox/html5-kitchen-sink -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,28 +8,36 @@
 </head>
 
 <body>
-  <header role="banner">
+  <header>
     <h1>HTML5 Kitchen Sink</h1>
-    <small>Jump to: <a href="#headings">Headings</a> | <a href="#sections">Sections</a> | <a href="#phrasing">Phrasing</a> | <a href="#palpable">Palpable Content</a> | <a href="#embeds">Embeds</a> | <a href="#forms">Forms</a> | <a href="#tables">Tables</a> </small>    <br><br>
+    <small>Jump to: <a href="#headings">Headings</a> | <a href="#sections">Sections</a> | <a
+        href="#phrasing">Phrasing</a> | <a href="#palpable">Palpable Content</a> | <a href="#embeds">Embeds</a> | <a
+        href="#forms">Forms</a> | <a href="#tables">Tables</a> </small> <br><br>
     <p>This section serves as the <code>header</code>.</p>
   </header>
   <hr>
   <main>
     <section id="headings">
-      <h3><a href="#headings">#</a> Headings </h3>
+      <h2><a href="#headings">#</a> Headings</h2>
       <p>Elements <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>,
         <code>h5</code>, <code>h6</code> make up the <em>heading content</em> category.
       </p>
-      <hgroup>
+      <section headingoffset="1">
         <h1>h1 I am most important.</h1>
         <h2>h2 Back in my quaint <a href='#'>garden</a></h2>
         <h3>h3 Jaunty <a href='#'>zinnias</a> vie with flaunting phlox.</h3>
         <h4>h4 Five or six big jet planes zoomed quickly by the new tower.</h4>
         <h5>h5 Expect skilled signwriters to use many jazzy, quaint old alphabets effectively.</h5>
         <h6>h6 Pack my box with five dozen liquor jugs.</h6>
+      </section>
+      <p><code>hgroup</code> groups a primary heading with one or more <code>p</code> subtitle elements:</p>
+      <hgroup>
+        <h2>A grouped heading</h2>
+        <p>This <code>p</code> is a subtitle inside an <code>hgroup</code> element.</p>
       </hgroup>
       <footer>
-        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#heading-content">Heading Content spec.</a></p>
+        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#heading-content">Heading Content
+            spec.</a></p>
         <p>Note: these two paragraphs are contained in a <code>footer</code> element.
         </p>
       </footer>
@@ -37,7 +46,7 @@
     <hr>
     <section id="sections">
       <header>
-        <h3><a href="#sections">#</a> Sections</h3>
+        <h2><a href="#sections">#</a> Sections</h2>
         <p>Elements <code>article</code>, <code>aside</code>, <code>nav</code>,
           <code>section</code> make up the <em>sectioning content</em> category.
         </p>
@@ -51,12 +60,22 @@
         </nav>
       </header>
       <article>
-        <p>This paragraph is nested inside an <code>article</code> element. It contains many different, sometimes useful, <a href="http://www.w3schools.com/tags/">HTML5 elements</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>,
-          and <small>small</small> but there are many others as well. Hover the following text for abbreviation element: <abbr title="abbreviation">abbr</abbr>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins>          text.</p>
-        <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> elements. Even more specifically, there is an element just for <var>variables</var>. Not to be mistaken with block
-          quotes below, the quote element lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) elements.</p>
+        <h3>Article example</h3>
+        <p>This paragraph is nested inside an <code>article</code> element. It contains many different, sometimes
+          useful, <a href="http://www.w3schools.com/tags/">HTML5 elements</a>. Of course there are classics like
+          <em>emphasis</em>, <strong>strong</strong>,
+          and <small>small</small> but there are many others as well. Hover the following text for abbreviation element:
+          <abbr title="abbreviation">abbr</abbr>. You can define <del>deleted text</del> which often gets replaced with
+          <ins>inserted</ins> text.</p>
+        <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the
+          <code>&lt;code&gt;</code> or <samp>samp</samp> elements. Even more specifically, there is an element just for
+          <var>variables</var>. Not to be mistaken with block
+          quotes below, the quote element lets you denote something as <q>quoted text</q>. Lastly don't forget the sub
+          (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) elements.</p>
         <section>
-          <p>This paragraph is contained in a <code>section</code> element of its parent <code>article</code> element.</p>
+          <h4>Section inside article</h4>
+          <p>This paragraph is contained in a <code>section</code> element of its parent <code>article</code> element.
+          </p>
           <p>↓ The following paragraph has the <code>hidden</code> attribute and should not be displayed. ↓</p>
           <p hidden>→ You should not see this paragraph. ←</p>
           <p>↑ The previous paragraph should not be displayed. ↑</p>
@@ -67,14 +86,14 @@
       </aside>
       <footer>
         <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#sectioning-content">Sectioning
-Content spec.</a></p>
+            Content spec.</a></p>
       </footer>
     </section>
 
     <hr>
     <section id="phrasing">
       <header>
-        <h3><a href="#phrasing">#</a> Phrasing</h3>
+        <h2><a href="#phrasing">#</a> Phrasing</h2>
         <p>Elements <code>abbr</code>, <code>b</code>, <code>bdi</code>,
           <code>bdo</code>, <code>br</code>, <code>cite</code>, <code>code</code>,
           <code>data</code>, <code>del</code>, <code>dfn</code>, <code>em</code>,
@@ -87,57 +106,84 @@ Content spec.</a></p>
       </header>
       <p><code>abbr</code>: Some vehicles meet the
         <abbr title="Super Ultra Low Emission Vehicle">SULEV</abbr> standard.<br>
-        <code>br</code> was used to make this sentence start on a new line.</p>
+        <code>br</code> was used to make this sentence start on a new line.
+      </p>
       <p><code>bdi</code>: Some languages read right to left, <bdi lang="ar">مرحبا</bdi>.
         <code>bdo</code>: <bdo dir="rtl">The normal direction has been
-overridden.</bdo></p>
-      <p><code>em</code> is used for <em>emphasis</em> and usually renders as italics, contrast that with <code>i</code> which is used for alternate voice or to offset from the normal (such as a phrase from a different language or taxonomic designation): <i>E. coli</i> can be bad. <code>strong</code> is used for <strong>importance or urgency</strong> and usually renders as bold, contrast that with <code>b</code> which is used to <b>draw attention</b> without the semantic meaning of  importance.</p>
-      <p><code>cite</code>: In the words of <cite>Charles Bukowski</cite> — <q>An intellectual says a simple thing in a hard way. An artist says a hard thing in a simple way.</q></p>
-      <p><code>data</code> can be used to specify <data value="2018-09-24T05:00-07:00">5 A.M.</data> that is machine-readable, but <code>time</code> is a better choice for specifying <time datetime="2018-09-24T05:00-07:00">5 A.M.</time> in a machine-readable format.
+          overridden.</bdo>
       </p>
-      <p><code>del</code> can be <del datetime="2017-10-11T01:25-07:00">varily</del> used to mark deletions. <code>ins</code> marks <ins datetime="2007-12-19 00:00Z">insertions</ins>. <code>s</code>: similar to <code>del</code>, but used to mark content that is no longer relevant. <s>Windows XP version available.</s> <code>u</code>: a holdover with no real meaning that should be <u>removed</u>. <code>mark</code>: the HTML equivalent of the <mark>yellow highlighter</mark>. <code>span</code>: a
-        <span>generic element</span> with no meaning by itself.</p>
-      <p><code>dfn</code>: Foreign phrases add a certain <dfn lang="fr" title="French: indefinable quality">je ne sais quoi</dfn> to one's prose.
+      <p><code>em</code> is used for <em>emphasis</em> and usually renders as italics, contrast that with <code>i</code>
+        which is used for alternate voice or to offset from the normal (such as a phrase from a different language or
+        taxonomic designation): <i>E. coli</i> can be bad. <code>strong</code> is used for <strong>importance or
+          urgency</strong> and usually renders as bold, contrast that with <code>b</code> which is used to <b>draw
+          attention</b> without the semantic meaning of importance.</p>
+      <p><code>cite</code>: In the words of <cite>Charles Bukowski</cite> — <q>An intellectual says a simple thing in a
+          hard way. An artist says a hard thing in a simple way.</q></p>
+      <p><code>data</code> can be used to specify <data value="2018-09-24T05:00-07:00">5 A.M.</data> that is
+        machine-readable, but <code>time</code> is a better choice for specifying <time
+          datetime="2018-09-24T05:00-07:00">5 A.M.</time> in a machine-readable format.
       </p>
-      <p><code>q</code>: The W3C page <cite>About W3C</cite> says the W3C’s mission is <q cite="https://www.w3.org/Consortium/">To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</q>.</p>
+      <p><code>del</code> can be <del datetime="2017-10-11T01:25-07:00">varily</del> used to mark deletions.
+        <code>ins</code> marks <ins datetime="2007-12-19 00:00Z">insertions</ins>. <code>s</code>: similar to
+        <code>del</code>, but used to mark content that is no longer relevant. <s>Windows XP version available.</s>
+        <code>u</code>: a holdover with no real meaning that should be <u>removed</u>. <code>mark</code>: the HTML
+        equivalent of the <mark>yellow highlighter</mark>. <code>span</code>: a
+        <span>generic element</span> with no meaning by itself.
+      </p>
+      <p><code>dfn</code>: Foreign phrases add a certain <dfn lang="fr" title="French: indefinable quality">je ne sais
+          quoi</dfn> to one's prose.
+      </p>
+      <p><code>q</code>: The W3C page <cite>About W3C</cite> says the W3C’s mission is <q
+          cite="https://www.w3.org/Consortium/">To lead the World Wide Web to its full potential by developing protocols
+          and guidelines that ensure long-term growth for the Web</q>.</p>
       <p><code>kbd</code> and <code>samp</code>: I did this:</p>
       <pre><samp>c:\&gt;<kbd>format c: /yes</kbd></samp></pre>
       <p>Is that bad? Press <kbd><kbd>Ctrl</kbd></kbd>+<kbd><kbd>F5</kbd></kbd> for a hard reload.</p>
-      <p><code>var</code>: To log in, type <kbd>ssh <var>user</var>@example.com</kbd>, where <var>user</var> is your user ID.</p>
+      <p><code>var</code>: To log in, type <kbd>ssh <var>user</var>@example.com</kbd>, where <var>user</var> is your
+        user ID.</p>
       <p><code>meter</code> and <code>progress</code>: Storage space usage:
         <meter value=6 max=8>6 blocks used (out of 8 total)</meter> Progress:
-        <progress value="37" max=100>37%</progress></p>
-      <p><code>sub</code> is used for subscripts: H<sub>2</sub>O. <code>sup</code> is used for superscripts: E = MC<sup>2</sup>. <code>small</code> is used for side comments: <q>I wrote this whole document. <small>[Editor's note: no he did not]</small></q>        <code>wbr</code>: used to specify where a word may break and it is super<wbr>cali<wbr>fragil<wbr>istic<wbr>expiali<wbr>do<wbr>cious.</p>
+        <progress value="37" max=100>37%</progress>
+      </p>
+      <p><code>sub</code> is used for subscripts: H<sub>2</sub>O. <code>sup</code> is used for superscripts: E =
+        MC<sup>2</sup>. <code>small</code> is used for side comments: <q>I wrote this whole document. <small>[Editor's
+            note: no he did not]</small></q> <code>wbr</code>: used to specify where a word may break and it is
+        super<wbr>cali<wbr>fragil<wbr>istic<wbr>expiali<wbr>do<wbr>cious.</p>
       <footer>
-        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#phrasing-content">Phrasing Content spec.</a></p>
+        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#phrasing-content">Phrasing Content
+            spec.</a></p>
       </footer>
     </section>
 
     <hr>
     <section id="palpable">
       <header>
-        <h3><a href="#palpable">#</a> Palpable Content</h3>
+        <h2><a href="#palpable">#</a> Palpable Content</h2>
         <p>Elements <code>a</code>, <code>address</code>, <code>blockquote</code>,
-          <code>button</code>, <code>details</code>, <code>dl</code>, <code>fieldset</code>,
-          <code>figure</code>, <code>form</code>, <code>input</code>, <code>label</code>,
-          <code>map</code>, <code>ol</code>, <code>output</code>, <code>pre</code>,
-          <code>select</code>, <code>table</code>, <code>textarea</code>,
-          <code>ul</code>, and others make up the <em>palpable content</em> category.
+          <code>button</code>, <code>details</code>, <code>dialog</code>, <code>dl</code>,
+          <code>fieldset</code>, <code>figure</code>, <code>form</code>, <code>input</code>,
+          <code>label</code>, <code>map</code>, <code>menu</code>, <code>ol</code>,
+          <code>output</code>, <code>pre</code>, <code>select</code>, <code>table</code>,
+          <code>template</code>, <code>textarea</code>, <code>ul</code>, and others make up
+          the <em>palpable content</em> category.
         </p>
       </header>
       <p><code>a</code>: <a href="http://example.com">Example</a>.</p>
       <p><code>address</code>:</p>
       <address>1 Infinite Loop<br>
-Cupertino, CA 95014<br>
-United States
-</address>
+        Cupertino, CA 95014<br>
+        United States
+      </address>
       <p><code>blockquote</code>:</p>
       <blockquote>
         <p>I quickly explained that many big jobs involve few hazards</p>
       </blockquote>
       <blockquote>
-        <p>This is a multi-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to
-          pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p>
+        <p>This is a multi-line blockquote with a cite reference. People think focus means saying yes to the thing
+          you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good
+          ideas that there are. You have to
+          pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is
+          saying no to 1,000 things.</p>
         <footer>Steve Jobs, <cite>Apple Worldwide Developers’ Conference, 1997</cite></footer>
       </blockquote>
       <p><code>details</code> and <code>summary</code>:</p>
@@ -155,12 +201,19 @@ United States
           <dd>320×240</dd>
         </dl>
       </details>
+      <p><code>dialog</code>: The <code>dialog</code> element represents a dialog box or other interactive component.
+        Use the <code>open</code> attribute to show it inline; use <code>.show()</code> or <code>.showModal()</code> via
+        JavaScript for programmatic control.</p>
+      <dialog open>
+        <p>This is an open <code>dialog</code> element.</p>
+      </dialog>
       <p><code>dl</code>:</p>
       <dl>
         <dt>Definition List Title</dt>
         <dd>Definition list division.</dd>
         <dt>Kitchen Sink</dt>
-        <dd>Used in expressions to describe work in which all conceivable (and some inconceivable) sources have been mined. In this case, a bunch of markup.</dd>
+        <dd>Used in expressions to describe work in which all conceivable (and some inconceivable) sources have been
+          mined. In this case, a bunch of markup.</dd>
         <dt>aside</dt>
         <dd>Defines content aside from the page content</dd>
         <dt>blockquote</dt>
@@ -168,14 +221,13 @@ United States
       </dl>
       <p><code>figure</code>:</p>
       <figure>
-        <img src="https://placecats.com/200/300">
-        <figcaption>Figure 1: A picture of a kitten from <a href="https://placecats.com/200/300/">placecats.com</a>
-        </figcaption>
+        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='200'%20height='300'%20viewBox='0%200%20200%20300'%3E%3Crect%20width='200'%20height='300'%20fill='%23c8a882'/%3E%3Crect%20x='60'%20y='60'%20width='80'%20height='70'%20rx='40'%20fill='%238b6914'/%3E%3Ccircle%20cx='80'%20cy='85'%20r='10'%20fill='%23222'/%3E%3Ccircle%20cx='120'%20cy='85'%20r='10'%20fill='%23222'/%3E%3Ccircle%20cx='83'%20cy='82'%20r='3'%20fill='white'/%3E%3Ccircle%20cx='123'%20cy='82'%20r='3'%20fill='white'/%3E%3Cellipse%20cx='100'%20cy='105'%20rx='12'%20ry='8'%20fill='%23e8a0a0'/%3E%3Cline%20x1='65'%20y1='100'%20x2='40'%20y2='95'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='65'%20y1='105'%20x2='38'%20y2='105'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='65'%20y1='110'%20x2='40'%20y2='115'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='135'%20y1='100'%20x2='160'%20y2='95'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='135'%20y1='105'%20x2='162'%20y2='105'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='135'%20y1='110'%20x2='160'%20y2='115'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cpolygon%20points='85,63%20100,48%20115,63'%20fill='%238b6914'/%3E%3Ctext%20x='100'%20y='200'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='14'%20fill='%23555'%3E200%20x%20300%3C/text%3E%3Ctext%20x='100'%20y='220'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='11'%20fill='%23888'%3Eplaceholder%3C/text%3E%3C/svg%3E" width="200" height="300" alt="a kitten placeholder">
+        <figcaption>Figure 1: A placeholder kitten image (inline SVG).</figcaption>
       </figure>
 
       <br>
       <hr>
-      <h4 id="forms"><a href="#forms">#</a> Forms</h4>
+      <h3 id="forms"><a href="#forms">#</a> Forms</h3>
       <form>
         <p>
           <label for="example-input-email">Email address</label>
@@ -223,7 +275,7 @@ United States
         </p>
         <p>
           <label for="example-input-date-time">Date / Time</label>
-          <input type="datetime" id="example-input-date-time">
+          <input type="datetime-local" id="example-input-date-time">
         </p>
         <p>
           <label for="example-input-date-time-local">Date / Time local</label>
@@ -248,6 +300,17 @@ United States
         <p>
           <label for="example-input-range">Range input</label>
           <input type="range" id="example-input-range" min="1" max="4" value="3">
+        </p>
+        <p>
+          <label for="example-input-datalist">Datalist</label>
+          <input type="text" id="example-input-datalist" list="browsers-list" placeholder="Type a browser name">
+          <datalist id="browsers-list">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+            <option value="Opera">
+          </datalist>
         </p>
         <p>
           <label for="example-select1">Select</label>
@@ -334,7 +397,8 @@ United States
           </div>
           <div>
             <input type="radio" name="option-radio" id="option-radio2" value="option2">
-            <label for="option-radio2">Option two can be something else and selecting it will deselect option one</label>
+            <label for="option-radio2">Option two can be something else and selecting it will deselect option
+              one</label>
           </div>
           <div>
             <input type="radio" name="option-radio" id="option-radio3" value="option3" disabled>
@@ -414,6 +478,27 @@ United States
 
       <br>
       <hr>
+      <p><code>menu</code>: Semantically equivalent to <code>ul</code>, but intended for a list of interactive items
+        such as toolbar buttons.</p>
+      <menu>
+        <li><button type="button">Cut</button></li>
+        <li><button type="button">Copy</button></li>
+        <li><button type="button">Paste</button></li>
+      </menu>
+      <p><code>menuitem</code> is <strong>deprecated and non-standard</strong>. It was originally conceived as a child
+        of <code>&lt;menu type="context"&gt;</code> or <code>&lt;menu type="toolbar"&gt;</code> to declare individual
+        commands — analogous to how <code>&lt;option&gt;</code> works inside <code>&lt;select&gt;</code>. The element
+        was removed from the HTML living standard before reaching broad browser support; only Firefox ever implemented
+        it, and that support was subsequently dropped. Do not use <code>menuitem</code>. Use <code>&lt;button&gt;</code>
+        or <code>&lt;li&gt;</code> elements inside <code>&lt;menu&gt;</code> instead.</p>
+      <pre><samp>&lt;!-- obsolete: do not use --&gt;
+&lt;menu type="context"&gt;
+  &lt;menuitem label="Refresh" onclick="..."&gt;&lt;/menuitem&gt;
+  &lt;menuitem label="Save" onclick="..."&gt;&lt;/menuitem&gt;
+&lt;/menu&gt;</samp></pre>
+
+      <br>
+      <hr>
       <p><code>pre</code>:</p>
       <pre>
 pre {
@@ -440,7 +525,7 @@ A leaflet.
 
       <br>
       <hr>
-      <h4 id="tables"><a href="#tables">#</a> Tables</h4>
+      <h3 id="tables"><a href="#tables">#</a> Tables</h3>
       <table>
         <caption>Tables can have captions now.</caption>
         <tbody>
@@ -457,21 +542,25 @@ A leaflet.
           <tr>
             <td><a href="#">Person Name</a></td>
             <td>1200</td>
-            <td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td>
+            <td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
+            </td>
           </tr>
           <tr>
             <td>Another Person</td>
             <td>1500</td>
-            <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+            <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies
+              vehicula ut id elit.</td>
           </tr>
           <tr>
             <td>Last One</td>
             <td>2800</td>
-            <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td>
+            <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
+              fermentum.</td>
           </tr>
         </tbody>
       </table>
-      <p id="table-summary">In the following table, characteristics are given in the second column, with the negative side in the left column and the positive side in the right column.</p>
+      <p id="table-summary">In the following table, characteristics are given in the second column, with the negative
+        side in the left column and the positive side in the right column.</p>
       <table aria-describedby="table-summary">
         <caption>Characteristics with positive and negative sides</caption>
         <thead>
@@ -495,7 +584,8 @@ A leaflet.
         </tbody>
       </table>
       <table>
-        <caption>Complex table with a <code>thead</code>, multiple <code>tbody</code> elements, and a <code>tfoot</code>.</caption>
+        <caption>Complex table with a <code>thead</code>, multiple <code>tbody</code> elements, and a
+          <code>tfoot</code>.</caption>
         <thead>
           <tr>
             <th></th>
@@ -536,19 +626,20 @@ A leaflet.
         </tfoot>
       </table>
       <table>
-        <caption>A Table with <code>col</code> and <code>colgroup</code> of proto-indo-europeans languages and words.</caption>
-          <col />
+        <caption>A Table with <code>col</code> and <code>colgroup</code> of proto-indo-europeans languages and words.
+        </caption>
+        <col>
         <colgroup>
-          <col />
-          <col />
-          <col />
-          <col />
+          <col>
+          <col>
+          <col>
+          <col>
         </colgroup>
         <colgroup>
-          <col />
-          <col />
-          <col />
-          <col />
+          <col>
+          <col>
+          <col>
+          <col>
         </colgroup>
         <thead>
           <tr>
@@ -610,85 +701,112 @@ A leaflet.
           </tr>
         </tbody>
       </table>
+      <p><code>template</code>: The <code>template</code> element holds inert HTML that is not rendered on page load.
+        Its content does not display, scripts inside it do not run, and images do not load until the template is cloned
+        and inserted via JavaScript.</p>
+      <template id="example-template">
+        <p>This content is inside a <code>template</code> element and is not rendered.</p>
+      </template>
       <footer>
         <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#palpable-content">Palpable
-Content spec.</a></p>
+            Content spec.</a></p>
       </footer>
     </section>
 
     <hr>
     <section id="embeds">
       <header>
-        <h3><a href="#embeds">#</a> Embeds</h3>
+        <h2><a href="#embeds">#</a> Embeds</h2>
         <p>Elements <code>audio</code>, <code>canvas</code>, <code>embed</code>,
           <code>iframe</code>, <code>img</code>, <code>math</code>, <code>object</code>,
-          <code>picture</code>, <code>svg</code>, <code>video</code> make up the <em>embedded content</em> category.</p>
+          <code>picture</code>, <code>svg</code>, <code>video</code> make up the <em>embedded content</em> category.
+          <code>map</code> and <code>area</code> are demonstrated here as they are used alongside <code>img</code>.
+        </p>
       </header>
-      <p><code>audio</code>: <audio controls src="https://upload.wikimedia.org/wikipedia/commons/c/c7/What_hath_God_wrought.ogg"></audio> By Cqdx [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0 </a>], <a href="https://commons.wikimedia.org/wiki/File:What_hath_God_wrought.ogg">from Wikimedia Commons</a>.</p>
+      <p><code>audio</code>: <audio controls
+          src="https://upload.wikimedia.org/wikipedia/commons/c/c7/What_hath_God_wrought.ogg"></audio> By Cqdx [<a
+          href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0 </a>], <a
+          href="https://commons.wikimedia.org/wiki/File:What_hath_God_wrought.ogg">from Wikimedia Commons</a>.</p>
       <p><code>iframe</code>: <iframe sandbox srcdoc="<h1>Sample Document</h1><p>This
 is a sample content.</p>"></iframe></p>
-      <p><code>img</code>: <img src="https://placecats.com/150/150 " alt="a kitten"></p>
+      <p><code>img</code>: <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='150'%20height='150'%20viewBox='0%200%20150%20150'%3E%3Crect%20width='150'%20height='150'%20fill='%23c8a882'/%3E%3Crect%20x='35'%20y='30'%20width='80'%20height='70'%20rx='40'%20fill='%238b6914'/%3E%3Ccircle%20cx='57'%20cy='58'%20r='9'%20fill='%23222'/%3E%3Ccircle%20cx='93'%20cy='58'%20r='9'%20fill='%23222'/%3E%3Ccircle%20cx='60'%20cy='55'%20r='3'%20fill='white'/%3E%3Ccircle%20cx='96'%20cy='55'%20r='3'%20fill='white'/%3E%3Cellipse%20cx='75'%20cy='76'%20rx='10'%20ry='7'%20fill='%23e8a0a0'/%3E%3Cline%20x1='42'%20y1='68'%20x2='18'%20y2='63'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='42'%20y1='73'%20x2='16'%20y2='73'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='42'%20y1='78'%20x2='18'%20y2='83'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='108'%20y1='68'%20x2='132'%20y2='63'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='108'%20y1='73'%20x2='134'%20y2='73'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='108'%20y1='78'%20x2='132'%20y2='83'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cpolygon%20points='60,33%2075,18%2090,33'%20fill='%238b6914'/%3E%3Ctext%20x='75'%20y='125'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='13'%20fill='%23555'%3E150%20x%20150%3C/text%3E%3Ctext%20x='75'%20y='142'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='10'%20fill='%23888'%3Eplaceholder%3C/text%3E%3C/svg%3E" alt="a kitten placeholder" width="150" height="150"></p>
+      <p><code>map</code> and <code>area</code>: An image map with four clickable quadrants defined by <code>area</code>
+        elements.</p>
+      <map name="example-map">
+        <area shape="rect" coords="0,0,75,75" href="#" alt="Top-left quadrant">
+        <area shape="rect" coords="75,0,150,75" href="#" alt="Top-right quadrant">
+        <area shape="rect" coords="0,75,75,150" href="#" alt="Bottom-left quadrant">
+        <area shape="rect" coords="75,75,150,150" href="#" alt="Bottom-right quadrant">
+      </map>
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='150'%20height='150'%20viewBox='0%200%20150%20150'%3E%3Crect%20width='150'%20height='150'%20fill='%23c8a882'/%3E%3Crect%20x='35'%20y='30'%20width='80'%20height='70'%20rx='40'%20fill='%238b6914'/%3E%3Ccircle%20cx='57'%20cy='58'%20r='9'%20fill='%23222'/%3E%3Ccircle%20cx='93'%20cy='58'%20r='9'%20fill='%23222'/%3E%3Ccircle%20cx='60'%20cy='55'%20r='3'%20fill='white'/%3E%3Ccircle%20cx='96'%20cy='55'%20r='3'%20fill='white'/%3E%3Cellipse%20cx='75'%20cy='76'%20rx='10'%20ry='7'%20fill='%23e8a0a0'/%3E%3Cline%20x1='42'%20y1='68'%20x2='18'%20y2='63'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='42'%20y1='73'%20x2='16'%20y2='73'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='42'%20y1='78'%20x2='18'%20y2='83'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='108'%20y1='68'%20x2='132'%20y2='63'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='108'%20y1='73'%20x2='134'%20y2='73'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='108'%20y1='78'%20x2='132'%20y2='83'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cpolygon%20points='60,33%2075,18%2090,33'%20fill='%238b6914'/%3E%3Ctext%20x='75'%20y='125'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='13'%20fill='%23555'%3E150%20x%20150%3C/text%3E%3Ctext%20x='75'%20y='142'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='10'%20fill='%23888'%3Eplaceholder%3C/text%3E%3C/svg%3E" usemap="#example-map" alt="Image with four clickable map regions" width="150" height="150">
       <p><code>math</code>:</p>
       <math xmlns="http://www.w3.org/1998/Math/MathML">
-<mtable>
-<mtr>
-<mtd>
-<mtext>Quadratic Equation</mtext>
-</mtd>
-<mtd>
-<mrow>
-  <mi>x</mi>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mo>-</mo>
-      <mi>b</mi>
-      <mo>&#x00B1;</mo>
-      <msqrt>
-        <mrow>
-          <msubsup>
-            <mi>b</mi>
-            <mrow></mrow>
-            <mn>2</mn>
-          </msubsup>
-          <mo>-</mo>
-          <mn>4</mn>
-          <mi>a</mi>
-          <mi>c</mi>
-        </mrow>
-      </msqrt>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-      <mi>a</mi>
-    </mrow>
-  </mfrac>
-</mrow>
-</mtd>
-</mtr>
-</mtable>
-</math>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mtext>Quadratic Equation</mtext>
+            </mtd>
+            <mtd>
+              <mrow>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mfrac>
+                  <mrow>
+                    <mo>-</mo>
+                    <mi>b</mi>
+                    <mo>&#x00B1;</mo>
+                    <msqrt>
+                      <mrow>
+                        <msubsup>
+                          <mi>b</mi>
+                          <mrow></mrow>
+                          <mn>2</mn>
+                        </msubsup>
+                        <mo>-</mo>
+                        <mn>4</mn>
+                        <mi>a</mi>
+                        <mi>c</mi>
+                      </mrow>
+                    </msqrt>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                    <mi>a</mi>
+                  </mrow>
+                </mfrac>
+              </mrow>
+            </mtd>
+          </mtr>
+        </mtable>
+      </math>
       <p><code>picture</code>:
         <picture>
-          <source srcset="https://placecats.com/240/300 2x,
-https://placecats.com/120/150 1x">
-          <img src="https://placecats.com/120/150" alt="a kitten">
+          <source media="(min-resolution: 2dppx)" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='240'%20height='300'%20viewBox='0%200%20240%20300'%3E%3Crect%20width='240'%20height='300'%20fill='%23c8a882'/%3E%3Crect%20x='70'%20y='60'%20width='100'%20height='90'%20rx='50'%20fill='%238b6914'/%3E%3Ccircle%20cx='95'%20cy='95'%20r='12'%20fill='%23222'/%3E%3Ccircle%20cx='145'%20cy='95'%20r='12'%20fill='%23222'/%3E%3Ccircle%20cx='99'%20cy='91'%20r='4'%20fill='white'/%3E%3Ccircle%20cx='149'%20cy='91'%20r='4'%20fill='white'/%3E%3Cellipse%20cx='120'%20cy='118'%20rx='14'%20ry='10'%20fill='%23e8a0a0'/%3E%3Cline%20x1='78'%20y1='107'%20x2='48'%20y2='100'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='78'%20y1='114'%20x2='45'%20y2='114'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='78'%20y1='121'%20x2='48'%20y2='128'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='162'%20y1='107'%20x2='192'%20y2='100'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='162'%20y1='114'%20x2='195'%20y2='114'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='162'%20y1='121'%20x2='192'%20y2='128'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cpolygon%20points='100,63%20120,43%20140,63'%20fill='%238b6914'/%3E%3Ctext%20x='120'%20y='220'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='16'%20fill='%23555'%3E240%20x%20300%3C/text%3E%3Ctext%20x='120'%20y='242'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='12'%20fill='%23888'%3Eplaceholder%3C/text%3E%3C/svg%3E">
+          <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='120'%20height='150'%20viewBox='0%200%20120%20150'%3E%3Crect%20width='120'%20height='150'%20fill='%23c8a882'/%3E%3Crect%20x='20'%20y='30'%20width='80'%20height='70'%20rx='40'%20fill='%238b6914'/%3E%3Ccircle%20cx='42'%20cy='58'%20r='9'%20fill='%23222'/%3E%3Ccircle%20cx='78'%20cy='58'%20r='9'%20fill='%23222'/%3E%3Ccircle%20cx='45'%20cy='55'%20r='3'%20fill='white'/%3E%3Ccircle%20cx='81'%20cy='55'%20r='3'%20fill='white'/%3E%3Cellipse%20cx='60'%20cy='76'%20rx='10'%20ry='7'%20fill='%23e8a0a0'/%3E%3Cline%20x1='27'%20y1='68'%20x2='5'%20y2='63'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='27'%20y1='73'%20x2='3'%20y2='73'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='27'%20y1='78'%20x2='5'%20y2='83'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='93'%20y1='68'%20x2='115'%20y2='63'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='93'%20y1='73'%20x2='117'%20y2='73'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='93'%20y1='78'%20x2='115'%20y2='83'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cpolygon%20points='45,33%2060,18%2075,33'%20fill='%238b6914'/%3E%3Ctext%20x='60'%20y='125'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='12'%20fill='%23555'%3E120%20x%20150%3C/text%3E%3Ctext%20x='60'%20y='142'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='10'%20fill='%23888'%3Eplaceholder%3C/text%3E%3C/svg%3E" alt="a kitten placeholder" width="120" height="150">
         </picture>
       </p>
-      <p><code>svg</code>: <svg role="presentation" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.199 24C19.199 13.467
+      <p><code>svg</code>: <svg role="presentation" width="24" height="24" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.199 24C19.199 13.467
 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291
 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301
 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909
 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909
-7.184 15.909 15.91z" /></svg></p>
-      <p><code>video</code>: <video controls src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Dwarf_hamsters_running_on_disc_2.ogv"></video></p>
+7.184 15.909 15.91z" />
+        </svg></p>
+      <p><code>object</code>: <object data="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='100'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20fill='%23c8a882'/%3E%3Crect%20x='20'%20y='15'%20width='60'%20height='50'%20rx='30'%20fill='%238b6914'/%3E%3Ccircle%20cx='38'%20cy='37'%20r='7'%20fill='%23222'/%3E%3Ccircle%20cx='62'%20cy='37'%20r='7'%20fill='%23222'/%3E%3Ccircle%20cx='40'%20cy='35'%20r='2.5'%20fill='white'/%3E%3Ccircle%20cx='64'%20cy='35'%20r='2.5'%20fill='white'/%3E%3Cellipse%20cx='50'%20cy='50'%20rx='8'%20ry='5'%20fill='%23e8a0a0'/%3E%3Cline%20x1='25'%20y1='44'%20x2='8'%20y2='40'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='25'%20y1='48'%20x2='6'%20y2='48'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='25'%20y1='52'%20x2='8'%20y2='56'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='75'%20y1='44'%20x2='92'%20y2='40'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='75'%20y1='48'%20x2='94'%20y2='48'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cline%20x1='75'%20y1='52'%20x2='92'%20y2='56'%20stroke='%238b6914'%20stroke-width='1.5'/%3E%3Cpolygon%20points='38,18%2050,5%2062,18'%20fill='%238b6914'/%3E%3Ctext%20x='50'%20y='82'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='10'%20fill='%23555'%3E100%20x%20100%3C/text%3E%3Ctext%20x='50'%20y='95'%20text-anchor='middle'%20font-family='sans-serif'%20font-size='8'%20fill='%23888'%3Eplaceholder%3C/text%3E%3C/svg%3E" type="image/svg+xml" width="100" height="100">A
+          placeholder kitten image embedded via the <code>object</code> element (this text is fallback content shown if
+          the object cannot be rendered).</object></p>
+      <p><code>video</code>: <video controls
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Dwarf_hamsters_running_on_disc_2.ogv"></video></p>
       <footer>
-        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#embedded-content">Embedded Content spec.</a></p>
+        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#embedded-content">Embedded Content
+            spec.</a></p>
       </footer>
     </section>
   </main>
   <hr>
-  <footer role="contentinfo">
+  <footer>
     <p>This section serves as the <code>footer</code>.</p>
     <p>Find this document on <a href="https://github.com/dbox/html5-kitchen-sink">GitHub</a>.</p>
   </footer>
